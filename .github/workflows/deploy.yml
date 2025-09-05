@@ -19,15 +19,18 @@ jobs:
         node-version: '18'
         cache: 'npm'
         
-    - name: Install dependencies
+    - name: Install root dependencies
       run: npm install
         
+    - name: Install daletou-main dependencies
+      run: cd daletou-main && npm install
+        
     - name: Build
-      run: npm run build
+      run: cd daletou-main && npm run build
         
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
+        publish_dir: ./daletou-main/dist
         cname: # 可选：如果有自定义域名可以在这里配置
