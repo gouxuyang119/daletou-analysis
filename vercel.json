@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd daletou-main && npm run build",
+  "outputDirectory": "daletou-main/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
