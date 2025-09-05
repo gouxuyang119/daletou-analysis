@@ -6,10 +6,9 @@
   "author": "Lottery Analysis Team",
   "type": "module",
   "scripts": {
-    "dev": "cd daletou-main && vite",
-    "build": "cd daletou-main && npm run build",
-    "preview": "cd daletou-main && vite preview",
-    "install-deps": "cd daletou-main && npm install",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "serve": "node serve-local.js",
     "serve:build": "npm run build && npm run serve"
   },
